@@ -32,8 +32,8 @@ jobs:
           echo -e '\n\n' | pmbootstrap init || true
           cd ~/.local/var/pmbootstrap/cache_git/pmaports
           git remote add sm7150 https://github.com/sm7150-mainline/pmaports.git
-          git fetch sm7150 master
-          git reset --hard sm7150/master
+          git fetch sm7150 davinci-tmp
+          git reset --hard sm7150/davinci-tmp
 
       - name: Clone kernel sources
         run: |
