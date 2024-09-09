@@ -22,7 +22,7 @@ jobs:
 
       - name: Install pmbootstrap from git
         run: |
-          git clone https://gitlab.com/postmarketOS/pmbootstrap --depth 1
+          git clone https://gitlab.com/postmarketOS/pmbootstrap --depth 1 --branch 2.3.1
           mkdir -p ~/.local/bin
           ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
           pmbootstrap --version
@@ -59,7 +59,7 @@ jobs:
       - name: Build xiaomi-davinci
         run: |
           cp xiaomi-davinci.cfg ~/.config/pmbootstrap.cfg
-          pmbootstrap install --password 147147
+          pmbootstrap install
           pmbootstrap export
           cp /tmp/postmarketOS-export/boot.img out/boot-xiaomi-davinci.img
           cp /tmp/postmarketOS-export/xiaomi-davinci.img out/rootfs-xiaomi-davinci.img
