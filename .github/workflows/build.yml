@@ -9,7 +9,7 @@ jobs:
   build-image:
     strategy:
       matrix:
-        version: ["v6.8.3"]
+        version: ["v6.8.7"]
 
     runs-on: ubuntu-latest
     steps:
